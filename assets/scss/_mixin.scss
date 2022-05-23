@@ -1,0 +1,8 @@
+@mixin subtitulos (
+    $colorFuente, $justificado, $margenizq
+)
+{
+    color: $colorFuente;
+    justify-content: $justificado;
+    margin-left: $margenizq;
+} 

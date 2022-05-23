@@ -1,0 +1,5 @@
+.etiquetas{
+    display: map-get($map: $etiquetas, $key:displey );
+    margin-top: map-get($map: $etiquetas, $key: margenArriba);
+    text-align: map-get($map: $etiquetas, $key: texto);
+}

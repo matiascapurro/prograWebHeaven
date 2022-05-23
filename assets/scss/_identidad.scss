@@ -1,0 +1,7 @@
+.identidad{
+    display: flex;
+    background-color: black;
+    h2{
+       @include subtitulos(aqua,center,500px)
+    }
+    }

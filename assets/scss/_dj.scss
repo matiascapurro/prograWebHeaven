@@ -1,0 +1,27 @@
+.etiquetaDj{
+    display: flex;
+    background-color: $colorPrincipal;
+    padding: 20px;
+    margin: 31px;
+    border: solid;
+    border-radius: 15px;
+    border-color: white;
+    img{
+        width: 50%;
+    }
+    .textoDj{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        h2{
+            justify-self: start;
+        }
+        p{
+            padding-top: 200px;
+            padding: 10px;
+            justify-self: center;
+        }
+        
+    }
+}

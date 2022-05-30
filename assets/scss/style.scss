@@ -216,21 +216,23 @@ body{
 }
 .fundadores{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr 2fr;
     background-color: black;
     color: white;
     align-items: center;
     justify-content: center;
     justify-items: center;
-    grid-template-areas: "foto titulo"
-                         "foto  desc";
+    grid-template-areas: "foto"
+                         "titulo"
+                         "desc";
 }
 .tituloNosotros{
     grid-area: titulo;
     color:#ccffff !important;
     border-bottom: solid;
     border-color: #00e6e6;
+    justify-content: center;
 }
 .descNosotros{
     grid-area: desc;
@@ -240,6 +242,7 @@ body{
     width: 300px;
 
 }
+
 .introForm{
     background-image: url(../imagenes/luces.jpeg);
     color: white;
@@ -263,6 +266,7 @@ body{
 
 }
 .videoMati{
+    display: inline-block;
     background-color: black;
     color: white;
     width: 100%;
@@ -280,6 +284,15 @@ body{
         justify-content: center;
         justify-items: center;
         align-content: center;
+    }
+    .chapita{
+        width: 100%; 
+        height: 300px;
+        justify-content: center;
+        align-self: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
     }
 }
 
@@ -315,5 +328,62 @@ body{
     }
     .carruselContenedor{
         background-image: url(../imagenes/abstracto-negro-celeste-y-blanco.jpg);
+    }
+    .fundadores{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 3fr;
+        background-color: black;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        grid-template-areas: "foto titulo"
+                             "foto  desc";
+    }
+    .tituloNosotros{
+        grid-area: titulo;
+        color:#ccffff !important;
+        border-bottom: solid;
+        border-color: #00e6e6;
+    }
+    .descNosotros{
+        grid-area: desc;
+    }
+    .fotoPibes{
+        grid-area: foto;
+        width: 300px;
+    
+    }
+    .videoMati{
+        display: inline-block;
+        background-color: black;
+        color: white;
+        width: 100%;
+        height: auto;
+        h2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            align-content: center;
+        }
+        iframe{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            align-content: center;
+        }
+        .chapita{
+            width: 50%; 
+            height: 300px;
+            justify-content: center;
+            align-self: center;
+            align-content: center;
+            align-items: center;
+            justify-items: center;
+            margin-left: 300px;
+        }
     }
 }

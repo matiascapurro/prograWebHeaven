@@ -258,7 +258,6 @@ body {
   width: 100%;
   height: 700px;
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: foto;
   margin: 0px;
@@ -329,10 +328,10 @@ body {
 .fundadores {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 3fr;
-      grid-template-rows: 1fr 3fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 3fr 1fr 2fr;
+      grid-template-rows: 3fr 1fr 2fr;
   background-color: black;
   color: white;
   -webkit-box-align: center;
@@ -342,27 +341,29 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   justify-items: center;
-      grid-template-areas: "foto titulo" "foto  desc";
+      grid-template-areas: "foto" "titulo" "desc";
 }
 
 .tituloNosotros {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: titulo;
   color: #ccffff !important;
   border-bottom: solid;
   border-color: #00e6e6;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .descNosotros {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: desc;
 }
 
 .fotoPibes {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: foto;
   width: 300px;
@@ -404,6 +405,7 @@ body {
 }
 
 .videoMati {
+  display: inline-block;
   background-color: black;
   color: white;
   width: 100%;
@@ -438,6 +440,23 @@ body {
   justify-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+
+.videoMati .chapita {
+  width: 100%;
+  height: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
 }
 
 @media (min-width: 1000px) {
@@ -480,6 +499,96 @@ body {
   }
   .carruselContenedor {
     background-image: url(../imagenes/abstracto-negro-celeste-y-blanco.jpg);
+  }
+  .fundadores {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 3fr;
+        grid-template-rows: 1fr 3fr;
+    background-color: black;
+    color: white;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+        grid-template-areas: "foto titulo" "foto  desc";
+  }
+  .tituloNosotros {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: titulo;
+    color: #ccffff !important;
+    border-bottom: solid;
+    border-color: #00e6e6;
+  }
+  .descNosotros {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: desc;
+  }
+  .fotoPibes {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: foto;
+    width: 300px;
+  }
+  .videoMati {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: auto;
+  }
+  .videoMati h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .videoMati iframe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .videoMati .chapita {
+    width: 50%;
+    height: 300px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    margin-left: 300px;
   }
 }
 /*# sourceMappingURL=style.css.map */

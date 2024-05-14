@@ -11,6 +11,20 @@
           justify-content: space-between;
 }
 
+.descripDj {
+  display: none;
+}
+
+.nombreDj {
+  cursor: pointer;
+  transition: transform 0.3s ease;  /* Suaviza la transición para que el cambio de tamaño no sea abrupto */
+}
+
+.nombreDj:hover {
+  transform: scale(1.05);  /* Aumenta el tamaño del nombre del DJ en un 10% al pasar el mouse */
+  color: #006aff;  /* Cambia el color para mayor visibilidad, ajusta al color que prefieras */
+}
+
 .nav img {
   width: 100px;
   height: 100px;

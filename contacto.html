@@ -47,28 +47,30 @@
     <main>
         <h1 class="identidad">Contacto</h1>
     <section class="presupuesto">
+      <form action="">
         <h2 class="introForm" data-aos="fade-up">Contanos que es lo que necesitas para tu evento, nosotros te armamos un presupuesto a medida</h2>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Email</span>
-            <input type="text" class="form-control" placeholder="Ingrese su mail" aria-label="Username" aria-describedby="basic-addon1">
-          </div>
-          
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Ingrese su nombre y apellido" aria-label="Recipient's username" aria-describedby="basic-addon2">
-          </div>
-          
-          <div class="input-group mb-3">
-            <span class="input-group-text">$</span>
-            <input type="text" class="form-control" placeholder="Ingrese presupuesto aproximado deseado" aria-label="Amount (to the nearest dollar)">
-            <span class="input-group-text">.00</span>
-          </div>
-          
-          <div class="input-group">
-            <span class="input-group-text">Haga una pequeña descripcion del evento</span>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
-          </div>
-          <br>
-          <button type="button" class="btn btn-primary">ENVIAR</button>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Email</span>
+              <input type="email" class="form-control" placeholder="Ingrese su mail" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Ingrese su nombre y apellido" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </div>
+            
+            <div class="input-group mb-3">
+              <span class="input-group-text">$</span>
+              <input type="text" class="form-control" placeholder="Ingrese presupuesto aproximado deseado" aria-label="Amount (to the nearest dollar)">
+              <span class="input-group-text">.00</span>
+            </div>
+            
+            <div class="input-group">
+              <span class="input-group-text">Haga una pequeña descripcion del evento</span>
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">ENVIAR</button>
+      </form>
     </section>
         <div class="somosMusica">
             <h3>SOMOS MUSICA, SOMOS HEAVEN</h3>
@@ -85,10 +87,29 @@
         <h3>Telefono: 261-205-9684</h3>
         <h3>Todos los derechos reservados</h3>
     </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">No pudimos enviar tu presupuesto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Los mensajes de error se insertarán aquí -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-      </script>
+    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

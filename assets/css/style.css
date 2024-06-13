@@ -11,18 +11,161 @@
           justify-content: space-between;
 }
 
+/* Estilos para el botón "Volver arriba" */
+button.volver-arriba {
+  background-color: #006aff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  display: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el botón "Abrir Modal" */
+#openModalBtn {
+  background-color: #006aff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px; /* Ajustado para que esté justo encima del botón "Volver arriba" */
+  right: 20px;
+  display: block; /* Siempre visible */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 130px;
+}
+
+#openModalBtn:hover {
+  background-color: #0051cc;
+  transform: scale(1.05);
+}
+
+#openModalBtn:active {
+  background-color: #0041a3;
+  transform: scale(1.02);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+.modal-content h2, .modal-content h3 {
+  color: #006aff;
+  text-align: center;
+}
+
+.modal-content p {
+  color: #333;
+  text-align: center;
+}
+
+.modal-content img {
+  display: block;
+  max-width: 100%;
+  max-height: 400px; /* Ajuste de altura máxima */
+  width: auto;
+  height: auto;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content audio {
+  width: 100%;
+  margin-top: 10px;
+  display: block;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+button.volver-arriba:hover {
+  background-color: #0051cc;
+}
+
 .descripDj {
   display: none;
 }
 
 .nombreDj {
   cursor: pointer;
-  transition: transform 0.3s ease;  /* Suaviza la transición para que el cambio de tamaño no sea abrupto */
+  transition: transform 0.3s ease;
 }
 
 .nombreDj:hover {
-  transform: scale(1.05);  /* Aumenta el tamaño del nombre del DJ en un 10% al pasar el mouse */
-  color: #006aff;  /* Cambia el color para mayor visibilidad, ajusta al color que prefieras */
+  transform: scale(1.05); 
+  color: #006aff; 
 }
 
 .nav img {
@@ -81,7 +224,7 @@ body {
 }
 
 .pie {
-  background-color: #00e6e6;
+  background-color: #006aff;
   width: 100%;
   height: 90px;
   display: -webkit-box;
@@ -131,6 +274,10 @@ body {
 .ficha:hover {
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
+}
+
+#fotoMana {
+  height: ;
 }
 
 .instagram {
@@ -473,6 +620,43 @@ body {
   justify-items: center;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 @media (min-width: 1000px) {
   .navIndex {
     -ms-grid-columns: 1 fr 1fr;
@@ -605,4 +789,3 @@ body {
     margin-left: 300px;
   }
 }
-/*# sourceMappingURL=style.css.map */

@@ -73,3 +73,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopButton = document.createElement('button');
+    backToTopButton.textContent = 'Volver arriba';
+    backToTopButton.className = 'volver-arriba';
+    document.body.appendChild(backToTopButton);
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 200) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+
+// Modal Pop-up
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById("myModal");
+    const btn = document.getElementById("openModalBtn");
+    const span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+

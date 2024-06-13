@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <meta name="description" content="Djs para tu fiesta con diferentes generos musicales con mucha diversion y entretenimiento para tu economico presupuesto">
-    <title>Heaven Djs</title>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./assets/css/style.css">
+<meta name="description" content="Djs para tu fiesta con diferentes generos musicales con mucha diversion y entretenimiento para tu economico presupuesto">
+<title>Heaven Djs</title>
+<link rel="icon" href="./assets/imagenes/logoheavenpuro.jpg" type="image/x-icon">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="conVideoDeFondo">
         <header class="cabecera">
             <img src="./assets/imagenes/heavenSinFondo.png" alt="foto logo heaven musica" class="logo">
-          <img src="./assets/imagenes/instagram.png" alt="foto logo instagrma" class="instagram">
+            <a href="https://www.instagram.com/heaven_ba_/" target="_blank">
+                <img src="./assets/imagenes/instagram.png" alt="foto logo instagrma" class="instagram">
+            </a>
         </header>
     </div>
     <main>
@@ -66,21 +69,39 @@
         <h3>Telefono: 261-205-9684</h3>
         <h3>Todos los derechos reservados</h3>
     </footer>
-    <!-- Modal para visualizar imágenes -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel">Vista de Imagen</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="" alt="Imagen ampliada" class="img-fluid">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
+    <button id="openModalBtn" type="button">Historia Djs</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>La Historia del DJ</h2>
+          <p>Desde sus humildes comienzos hasta convertirse en iconos globales de la música, los DJs han recorrido un largo camino. Aquí te contamos su fascinante historia.</p>
+          
+          <!-- Sección 1: Los Primeros Días -->
+          <h3>Los Primeros Días</h3>
+          <p>La historia del DJ comienza en la década de 1940, cuando los primeros "Disc Jockeys" comenzaron a tocar discos en la radio. El término "DJ" fue acuñado por el locutor de radio Walter Winchell. Los DJs de radio eran responsables de seleccionar y reproducir música para sus oyentes, convirtiéndose en los primeros curadores musicales. Un DJ famoso de esta época fue Jimmy Savile, quien en 1943 organizó la primera discoteca utilizando discos de vinilo en lugar de una banda en vivo. Durante estos años, los DJs de radio también comenzaron a utilizar técnicas como el beatmatching y el slip-cueing para crear transiciones suaves entre canciones, sentando las bases para las futuras innovaciones en la mezcla de música.</p>
+          <img src="/assets/imagenes/primerDj.png" alt="Imagen de un DJ antiguo" id="fotoMana">
+          
+          <!-- Sección 2: La Revolución del Club -->
+          <h3>La Revolución del Club</h3>
+          <p>En la década de 1970, los DJs comenzaron a ganar popularidad en los clubes nocturnos, mezclando discos en vivo para mantener a la multitud bailando. Este período marcó el nacimiento de la cultura del DJ tal como la conocemos hoy. DJs pioneros como David Mancuso, Larry Levan y Frankie Knuckles crearon experiencias musicales únicas en lugares icónicos como The Loft y Paradise Garage. La introducción de equipos como el Technics SL-1200, conocido por su estabilidad y durabilidad, permitió a los DJs manipular discos con mayor precisión, lo que llevó al desarrollo de técnicas de mezcla y scratching. Estos DJs no solo eran músicos, sino también figuras centrales en el movimiento de liberación gay y la cultura de la música dance, utilizando su música para crear espacios inclusivos y vibrantes.</p>
+          <img src="/assets/imagenes/segundoDj.png" alt="Club nocturno">
+  
+          <!-- Sección 3: La Era Digital -->
+          <h3>La Era Digital</h3>
+          <p>Con la llegada de la tecnología digital en los años 2000, los DJs comenzaron a usar software y equipos avanzados para crear sets más complejos y dinámicos. La aparición de programas como Traktor, Serato y Ableton Live revolucionó la forma en que los DJs mezclaban y manipulaban la música. Estos programas permitieron a los DJs realizar mezclas en tiempo real, agregar efectos y sincronizar pistas automáticamente. Además, el uso de controladores MIDI y equipos como CDJs de Pioneer reemplazó en gran medida a los vinilos y CDJs tradicionales, permitiendo a los DJs acceder a vastas bibliotecas de música digital. La era digital también vio el surgimiento de DJs como Tiësto, Deadmau5 y David Guetta, quienes llevaron la música electrónica a grandes audiencias y festivales globales, consolidando la importancia cultural y comercial de los DJs en el siglo XXI.</p>
+          <img src="/assets/imagenes/tercerDj.png" alt="Equipo DJ moderno">
+          
+          <!-- Reproductores de Audio -->
+          <h3>Escucha la Evolución</h3>
+          <audio controls>
+            <source src="/assets/imagenes/Seru Giran - Frecuencia modulada (320).mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio>
+          <audio controls>
+            <source src="/assets/imagenes/Tin Pan Alley (AKA Roughest Place in Town).mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio>
         </div>
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

@@ -114,3 +114,86 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const calendarEl = document.getElementById('calendar');
+    const modal = document.getElementById('modal');
+    const modalText = document.getElementById('modal-text');
+    const closeModal = document.getElementsByClassName('close')[0];
+    const emailForm = document.getElementById('email-form');
+    const emailInput = document.getElementById('email');
+    let selectedDate = null;
+
+    // Load reserved dates from localStorage
+    let reservedDates = JSON.parse(localStorage.getItem('reservedDates')) || [];
+
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        height: 'auto',
+        contentHeight: 'auto',
+        expandRows: true,
+        selectable: true,
+        validRange: {
+            start: new Date().toISOString().split("T")[0]  // Disable past dates
+        },
+        select: function(info) {
+            selectedDate = info.startStr;
+            modalText.textContent = `Do you want to reserve the date: ${selectedDate}?`;
+            modal.style.display = 'block';
+        },
+        events: [
+            {
+                title: 'Unavailable',
+                start: '2024-06-10',
+                end: '2024-06-12',
+                color: 'red'
+            },
+            {
+                title: 'Unavailable',
+                start: '2024-06-15',
+                color: 'red'
+            },
+            ...reservedDates.map(date => ({
+                title: 'Reserved',
+                start: date,
+                color: 'red'
+            }))
+        ]
+    });
+
+    calendar.render();
+
+    closeModal.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+    emailForm.onsubmit = function(event) {
+        event.preventDefault();
+        const userEmail = emailInput.value;
+        if (userEmail && selectedDate) {
+            alert(`You have reserved the date: ${selectedDate}`);
+            modal.style.display = 'none';
+
+            // Add the reserved date to localStorage
+            reservedDates.push(selectedDate);
+            localStorage.setItem('reservedDates', JSON.stringify(reservedDates));
+
+            // Add the reserved date to the calendar
+            calendar.addEvent({
+                title: 'Reserved',
+                start: selectedDate,
+                color: 'red'
+            });
+
+            emailInput.value = '';
+        }
+    }
+});

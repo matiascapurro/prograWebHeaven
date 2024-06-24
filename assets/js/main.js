@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         select: function(info) {
             selectedDate = info.startStr;
-            modalText.textContent = `Do you want to reserve the date: ${selectedDate}?`;
+            modalText.textContent = `Quieres reservar la fecha: ${selectedDate}?`;
             modal.style.display = 'block';
         },
         events: [
